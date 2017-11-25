@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    tools:context="usil.robotics.pe.robotics.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/headerll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/connectBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conectar robot"/>
+
+        <Button
+            android:id="@+id/startPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regresar a la posición inicial"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerll"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Primera articulación"/>
+
+        <EditText
+            android:id="@+id/angle1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Segunda articulación"/>
+
+        <EditText
+            android:id="@+id/angle2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:text="90"
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tercera articulación"/>
+
+        <EditText
+            android:id="@+id/angle3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:text="90"/>
+
+
+        <Button
+            android:id="@+id/sendAngles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:text="Mover robot"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startAnim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerll"
+        android:layout_marginTop="39dp"
+        android:layout_toEndOf="@+id/linearLayout"
+        android:text="Iniciar Animación"/>
+
+
+</RelativeLayout>
